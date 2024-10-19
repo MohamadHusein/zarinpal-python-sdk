@@ -11,7 +11,7 @@
 ### نصب با استفاده از pip
 
 ```
-pip install zarinpal_sdk
+pip install zarinpal-python-sdk
 ```
 
 
