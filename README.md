@@ -19,7 +19,7 @@ pip install zarinpal-python-sdk
 تنظیمات اولیه
 برای استفاده از SDK، ابتدا باید merchant_id (مرچنت کد) خود را از پنل زرین‌پال دریافت کرده و آن را برای تعامل با درگاه پرداخت تنظیم کنید. همچنین، می‌توانید بین حالت آزمایشی (sandbox) و واقعی سوییچ کنید.
 ```
-from zarinpal.client import ZarinpalClient
+from zarinpal_python_sdk.client import ZarinpalClient
 
 client = ZarinpalClient(merchant_id="your_merchant_id", sandbox=True)
 ```
@@ -130,7 +130,7 @@ else:
 
 
 ```
-from zarinpal.exceptions import PaymentRequestError, NetworkError
+from zarinpal_python_sdk.exceptions import PaymentRequestError, NetworkError
 
 try:
     response = client.request_payment(
@@ -155,7 +155,7 @@ except NetworkError as e:
 دریافت پیام خطای مرتبط با کد وضعیت:
 
 ```
-from zarinpal.utils import get_status_message
+from zarinpal_python_sdk.utils import get_status_message
 
 status_code = -10
 message = get_status_message(status_code)
@@ -170,7 +170,7 @@ print(message)  # خروجی: "ای پی یا مرچنت کد پذیرنده ص�
 بررسی فرمت ایمیل:
 
 ```
-from zarinpal.utils import is_valid_email
+from zarinpal_python_sdk.utils import is_valid_email
 
 email = "test@example.com"
 if is_valid_email(email):
@@ -187,7 +187,7 @@ else:
 بررسی فرمت شماره موبایل:
 
 ```
-from zarinpal.utils import is_valid_mobile
+from zarinpal_python_sdk.utils import is_valid_mobile
 
 mobile = "09123456789"
 if is_valid_mobile(mobile):
