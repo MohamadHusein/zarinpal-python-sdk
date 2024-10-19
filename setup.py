@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="zarinpal_python-sdk",  
-    version="0.1",  # نسخه پکیج
+    name="zarinpal-python-sdk",
+    version="0.1",
     packages=find_packages(),
     install_requires=[
         "requests>=2.25.1",
@@ -21,4 +21,5 @@ setup(
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.6',
+    keywords="zarinpal, payment, sdk, python",
 )
